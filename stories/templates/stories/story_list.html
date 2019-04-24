@@ -1,13 +1,13 @@
-<html>
-    <div>
-        <h1><a href="/">Canary Technologies</a></h1>
-    </div>
-    
+{% extends 'stories/base.html' %}
+
+{% block content %}
     {% for story in stories %}
-        <div>
+        <div class = "post">
             <p>published: {{ story.published_date }}</p>
-            <h2><a href="">{{ story.story_title }}</a></h2>
+            <h1><a href="{% url 'story_detail' pk=story.pk %}">{{ story.story_title }}</a></h1> 
             <p>{{ story.story_text|linebreaksbr }}</p>
+            <p>Incident type {{ story.incident_type }}</p>
+            <p>Perpetrator type {{ story.perpetrator_type }}</p>
         </div>
     {% endfor %}
-</html>
+{% endblock %}

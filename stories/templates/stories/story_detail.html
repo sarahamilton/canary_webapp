@@ -1,0 +1,15 @@
+{% extends 'stories/base.html' %}
+
+{% block content %}
+    <div class="post">
+        {% if story.published_date %}
+            <div class="date">
+                {{ story.published_date }}
+            </div>
+        {% endif %}
+        <h2>{{ story.story_title }}</h2>
+        <p>{{ story.story_text|linebreaksbr }}</p>
+        <p>Incident type {{ story.incident_type }}</p>
+        <p>Perpetrator type {{ story.perpetrator_type }}</p>
+    </div>
+{% endblock %}
