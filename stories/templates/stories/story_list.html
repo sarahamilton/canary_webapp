@@ -1,0 +1,13 @@
+<html>
+    <div>
+        <h1><a href="/">Canary Technologies</a></h1>
+    </div>
+    
+    {% for story in stories %}
+        <div>
+            <p>published: {{ story.published_date }}</p>
+            <h2><a href="">{{ story.story_title }}</a></h2>
+            <p>{{ story.story_text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+</html>
