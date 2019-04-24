@@ -7,6 +7,7 @@
                 {{ story.published_date }}
             </div>
         {% endif %}
+        <a class="btn btn-default" href="{% url 'story_edit' pk=story.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
         <h2>{{ story.story_title }}</h2>
         <p>{{ story.story_text|linebreaksbr }}</p>
         <p>Incident type {{ story.incident_type }}</p>
