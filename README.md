@@ -1,5 +1,6 @@
-# whoa-code
-This is a blog template to start a simple Django blogging application 
+# Canary Webapp
+This is the skeleton of Canary's web app. Canary aims to make it safer and easier for people to report workplace harassment. 
 
-Thanks to Django Girls for the helpful tutorial for getting this set up! 
-See https://tutorial.djangogirls.org for the documentation.
+Functionality will include:
+- Submitting reports via a form
+- Viewing a dashboard of stats
